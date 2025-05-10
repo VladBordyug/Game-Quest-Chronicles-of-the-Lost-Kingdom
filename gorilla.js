@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const volumeKey = 'backgroundMusicVolume';
     let canClick = true;
     let historyStack = [];
-    const delay = 5000; 
+    const delay = 2000; 
 
 settingsButton.addEventListener('click', function() {
         settingsPanel.style.display = settingsPanel.style.display === 'block' ? 'none' : 'block';
@@ -514,11 +514,11 @@ window.playAgain = function () {
             <div class="game-intro">
                 <h2>У горах</h2>
                 <p>
-                    Ви вирушаєте в гори. Шлях складний і небезпечний, але ви знаходите покинуту хатину...
+                    Ви вирушаєте в гори. Шлях складний і небезпечний. Ви знаходите покинуту хатину, але потрапляєте в пастку розбійників, які грабують і залишають вас помирати.
+                    Ваша подорож закінчується трагічно.
                 </p>
                 <div class="button-container disabled">
-                    <button class="next-button" onclick="searchTheCabinForClues()">Обшукати хатину на наявність підказок</button>
-                    <button class="next-button" onclick="followATrailLeadingDeeperIntoTheMountains()">Піти стежкою, що веде вглиб гір</button>
+                    <button class="next-button" onclick="gameOver()">Кінець гри</button>
                 </div>
                 <button class="back-button" onclick="goBack()">Назад</button>
                 <div class="timer">Зачекайте ${delay / 1000} секунд...</div>
