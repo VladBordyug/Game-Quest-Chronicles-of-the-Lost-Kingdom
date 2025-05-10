@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Quest: Chronicles of the Lost Kingdom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/" class="logo">Game Quest: Chronicles of the Lost Kingdom</a>
+        </div>
+        <nav>
+            <ul>
+                
+                <li><a href="/">Головна</a></li>
+                <li><button id="about-button">Про гру</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Пориньте у світ пригод!</h1>
+                <p>Розгадуйте загадки, досліджуйте невідоме та станьте героєм Game Quest: Chronicles of the Lost
+                    Kingdom</p>
+                <a href="gorilla.html" id="start-button" class="button" target="_blank">Розпочати квест</a>
+            </div>
+        </section>
+        <section class="features">
+            <h2>Особливості гри</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Захопливі історії</h3>
+                    <p>На вас чекають унікальні та непередбачувані сюжетні лінії.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Кінцівки</h3>
+                    <p>Гра має більше 5 різних кінцівок!.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Дизайн</h3>
+                    <p>Сайт має приємний дизайн у стилі лісу з елементами градієнту та анімаціями.</p>
+                </div>
+            </div>
+        </section>
+        <section class="screenshots">
+            <h2>Скріншоти</h2>
+            <div class="screenshots-gallery">
+            <img src="Знімок екрана 2025-05-09 234325.png" alt="Геймплей" onclick="openModal('Знімок екрана 2025-05-09 234325.png')" style="cursor: pointer;"/>
+            <img src="Знімок екрана 2025-05-10 195034.png" alt="Геймплей" onclick="openModal('Знімок екрана 2025-05-10 195034.png')" style="cursor: pointer;"/>
+            <img src="Знімок екрана 2025-05-10 191601.png" alt="Геймплей" onclick="openModal('Знімок екрана 2025-05-10 191601.png')" style="cursor: pointer;"/>
+            <img src="Знімок екрана 2025-05-10 191819.png" alt="Геймплей" onclick="openModal('Знімок екрана 2025-05-10 191819.png')" style="cursor: pointer;"/>
+            <img src="Знімок екрана 2025-05-10 192134.png" alt="Геймплей" onclick="openModal('Знімок екрана 2025-05-10 192134.png')" style="cursor: pointer;"/>
+            <img src="Знімок екрана 2025-05-10 195155.png" alt="Геймплей" onclick="openModal('Знімок екрана 2025-05-10 195155.png')" style="cursor: pointer;"/>
+        
+            </div>
+        </section>
+
+        <div id="imageModal" class="modal">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        </div>
+
+        <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 1100px;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        </style>
+
+        <script>
+        function openModal(imageSrc) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = imageSrc;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+        </script>
+        <section class="call-to-action">
+            <h2>Готові до пригод?</h2>
+            <p>Приєднуйтесь до Game Quest: Chronicles of the Lost Kingdom сьогодні та почніть свою власну історію!</p>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Game Quest: Chronicles of the Lost Kingdom. Всі права захищено.</p>
+            <nav>
+                <ul>
+                    <li><a href="/privacy">Політика конфіденційності</a></li>
+                    <li><a href="/terms">Умови використання</a></li>
+                    <li><a href="/contact">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Про Game Quest: Chronicles of the Lost Kingdom</h2>
+            <p>Це захоплива пригодницька гра, де ви зможете розгадувати складні головоломки, досліджувати чарівні
+                світи та зустрічати цікавих персонажів.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

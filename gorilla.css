@@ -1,0 +1,343 @@
+
+body {
+    background: url('forest-6862143.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background 0.5s ease;
+    font-family: sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+main section article {
+    background: linear-gradient(to right, #008000, #118111);
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.2em;
+}
+
+main section article:hover {
+    transform: scale(1.05);
+    background-color: rgba(173, 51, 173, 0.9);
+}
+
+.game-title {
+    background: linear-gradient(to right, #3ae63a, #aaff80);
+    color: black;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.settings-panel {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 300px;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.settings-panel.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.setting-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle-label input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.toggle-slider {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    display: inline-block;
+    border-radius: 20px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+input:checked + .toggle-slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(20px);
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-left: 10px;
+}
+
+.game-intro {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.next-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.next-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.choice-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.choice-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.choice-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.gender-selection {
+    text-align: center;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.gender-selection.show {
+    display: block;
+    opacity: 1;
+}
+
+.gender-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.gender-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 40px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    max-width: 180px;
+}
+
+.gender-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.game-title {
+    background: linear-gradient(to right, #3ae63a, #aaff80);
+    color: black;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.back-button {
+    background: linear-gradient(to bottom, #8fbc8f, #2e8b57); 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 8px; 
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    position: absolute; 
+    bottom: 20px; 
+    left: 20px; 
+    z-index: 10; 
+}
+
+.back-button:hover {
+    background: linear-gradient(to bottom, #a9d1a9, #38a063); 
+}
+
+.back-button:active {
+    background: linear-gradient(to bottom, #6b8e23, #226b41); 
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); 
+}
+
+.game-intro {
+    position: relative; 
+    padding-bottom: 70px; 
+    
+}
+#tooltip {
+    position: absolute;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#tooltip.show {
+    display: block;
+    opacity: 1;
+}
+.stgorilla{
+    text-decoration: none;
+}
+main section article {
+    background: linear-gradient(to right, #008000, #118111);
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.2em;
+}
+
+main section article:hover {
+    transform: scale(1.05);
+    
+}
+.play-button {
+    background: linear-gradient(to right, #008000, #a9d1a9);
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.2em;
+}
+.next-button{
+    background: linear-gradient(to right, #008000, #21a421);
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.2em;
+}
+.g{
+    background: linear-gradient(to right, #008000, #a9d1a9);
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+.g:hover{
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    font-size: 1.2em;
+    transform: scale(1.05);
+}

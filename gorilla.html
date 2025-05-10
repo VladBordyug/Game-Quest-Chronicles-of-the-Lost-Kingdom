@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гра</title>
+    <link rel="stylesheet" href="gorilla.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main id="game-container">
+        <div class="game-title">GameQuest:Chronicles of the Lost Kingdom</div>
+        <section class="menu">
+            <article class="play-button">Грати</article>
+            <article class="settings-button">Налаштування</article>
+            <a href="index.html" class="stgorilla"><article>Вийти</article></a>
+        </section>
+        <div class="settings-panel">
+            <div class="setting-item">
+                <label class="toggle-label">
+                    Музика:
+                    <input type="checkbox" id="music-toggle">
+                    <span class="toggle-slider round"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <label for="volume-slider">Гучність:</label>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+            </div>
+           
+            <div class="setting-item">
+                <label for="color-picker">Колір кнопок:</label>
+                <input type="color" id="color-picker" value="#ffffff">
+            </div>
+        </div>
+
+        <div class="game-intro" style="display:none;">
+            <h2>Знайти союзників у сусідніх королівствах</h2>
+            <p>Ви вирушаєте до сусіднього королівства Солов'їних Долин, відомого своєю мудрістю та миролюбністю. Які ваші перші кроки у цьому королівстві?</p>
+            <button class="next-button" onclick="seekCouncil()">Звернутися за порадою до королівської ради</button>
+            <button class="next-button" onclick="visitAncientLibrary()">Відвідати стародавню бібліотеку в пошуках знань</button>
+        </div>
+        <a href="cinematic-fantasy-dark-160932.mp3" download="cinematic-fantasy-dark-160932.mp3" class="g">Завантажити музику</a>
+        
+        <button id="download-all" class="g">Завантажити всі зображення</button>
+
+        <script>
+            document.getElementById('download-all').addEventListener('click', function() {
+                const images = [
+                    "Знімок екрана 2025-05-09 234325.png",
+                    "Знімок екрана 2025-05-10 182629.png",
+                    "Знімок екрана 2025-05-10 191601.png",
+                    "Знімок екрана 2025-05-10 191819.png",
+                    "Знімок екрана 2025-05-10 192134.png"
+                ];
+
+                images.forEach(image => {
+                    const link = document.createElement('a');
+                    link.href = image;
+                    link.download = image;
+                    link.click();
+                });
+            });
+        </script>
+        </main>
+
+    <audio id="background-music" loop src="cinematic-fantasy-dark-160932.mp3"></audio>
+    <script src="gorilla.js"></script>
+</body>
+</html>
