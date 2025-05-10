@@ -1,3 +1,4 @@
+// Отримуємо посилання на кнопку налаштувань та панель налаштувань
 document.addEventListener('DOMContentLoaded', function () {
     const settingsButton = document.querySelector('.settings-button');
     const playButton = document.querySelector('.play-button');
